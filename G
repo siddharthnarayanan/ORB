@@ -1,0 +1,234 @@
+boolean close = false;
+boolean lightBox = false;
+int lightBoxID = 0;
+boolean select = true;
+float arcMag = 100;
+float mouseTime = 0;
+int namesLeft = 17;
+int namesApart = 18;
+int namesBottom = 0;
+
+/**
+ * Draws the GUI
+ */
+void drawGUI()
+{  
+  cam.beginHUD();
+  drawNames();
+
+  // if the person has selected an information label
+  if (lightBox)
+    {
+      if (lightBoxX < width)
+        playFlyInFromLeft();
+      else
+        playFlyInFromRight();
+      playFlyIn = true;
+    }
+    
+    Ani.to(this, 1, "lightBoxX", width, Ani.EXPO_OUT);    
+    rectMode(CORNER);
+    fill(0, opacity - 40);
+    stroke(255, opacity - 40);
+    strokeWeight(1);    
+    rect(-5, 75, width + 10, height - 150);
+    rectMode(CORNER);
+    lightBox_Info(lightBoxID);
+  }
+  
+  if (close == true)
+  {
+    lightBox = false;
+    select = true;
+  }
+
+  if (!lightBox && swipeAway) 
+  {
+    playFlyIn = false;
+    // if it has a video, stop the video
+    if (videoLoad[lightBoxID]) {
+      vids[lightBoxID].stop();
+    }
+    
+    // if the swipe is left
+    if (swipeAwayLeft)
+    {
+      if (!playFlyOut)
+        playSwipeAwayLeft();
+      Ani motion = Ani.to(this, 1.5, "lightBoxX", (-3 * width));
+      if(lightBoxX <= (-3 * width) + 1.5)
+      {
+        motion.end();
+        swipeAway = false;
+        playFlyOut = false;
+        return;
+      }
+    }
+    // if the swipe is right
+    else
+    {
+       if (!playFlyOut)
+         playSwipeAwayRight();
+       Ani motion = Ani.to(this, 1.5, "lightBoxX", (6 * width));
+       if (lightBoxX >= (6 * width) - 3)
+       return;
+        }
+    }
+    rectMode(CORNER);
+    fill(0, opacity - 40);
+    stroke(255, opacity - 40);
+    strokeWeight(1);    
+    rect(-5, 75, width + 10, height - 150);
+    lightBox_Info(lightBoxID);
+    
+    close = false;
+  }
+  cam.endHUD();
+}
+
+/**
+ * Stuff that should always be in the lightbox if a project is selected
+ */
+  if (swipeAway)
+  {
+    Ani.to(this, 1.5, "opacity", 0);
+  }
+  else
+  {
+    Ani.to(this, 1.5, "opacity", 240);
+  }
+  fill(255, opacity);
+  noStroke();
+  rectMode(CORNER);
+  textAlign(CENTER, TOP);
+  textSize(20);
+  text(projTitle[i], lightBoxX/ 2, (height/2) - 275);
+  textSize(17.5);
+  boolean displayInfo = true;
+  if (isPerson[i])
+  {
+    displayInfo = false;
+  }
+  
+  if (displayInfo)
+  {
+    String participants = projPeople[i];
+    text("Participants",  lightBoxX / 2, (height/2)-240);
+    
+    textAlign(CENTER, CENTER);
+    text(participants, -1 * (width - lightBoxX - 20), (height/2) - 215, width - 40, 50);
+  }
+  
+  // under project title line vertical line between project title and media/details space
+    int iHeight = images[i].height;
+    int realWidth = Math.min(iWidth, 400);
+    int realHeight = Math.min(iHeight, 400);
+    image(images[i], lightBoxX/2 - 75 - realWidth, (height/2)-160, realWidth, realHeight);
+    textSize(18);
+    textAlign(LEFT);
+    if (projDescrip[i].length() > 500)
+      textSize(15);
+    text(projDescrip[i],  lightBoxX/2 - 40, (height/2) - 160, (width/2) , height/2 + 160);
+  }
+  else if (videoLoad[i]) 
+  { 
+    int vWidth = vids[i].width;
+    int vHeight = vids[i].height;
+    int realWidth = Math.min(vWidth, 640);
+    int realHeight = Math.min(vHeight, 360);
+    image(vids[i], lightBoxX/2 - realWidth - 30, (height/2)-160, realWidth, realHeight);
+    if (lightBox && lightBoxX >= width - 10)
+      vids[i].play();        
+    textSize(16);
+    textAlign(LEFT);
+    text("Project Description:\n\n" + projDescrip[i],  lightBoxX/2 + 30, (height/2) - 160, width/2 - 90, (height/2 + 85));
+  }    
+  else
+  {
+    textSize(18);
+    textAlign(CENTER);
+    if (displayInfo)
+      text("Project Description:",  lightBoxX/4, (height/2) - 160, (width/2), 320);
+    textAlign(LEFT);
+    text(projDescrip[i],  lightBoxX/4, (height/2) - 160 + 36, (int)Math.floor((width/2) + 1) , 320);
+    
+  }
+  colorMode(HSB);  
+}
+
+// changing all of the styles when the Home screen is loaded
+void selectHome()
+{
+  studioSelect = 0;
+  level2 = -1;
+  Ani.to(this, 2, "Alpha1", 50);
+  allLabels = true;
+}
+
+
+void keyPressed()
+{
+  if (key == 'h')
+  {
+    selectHome();
+  }
+  if (key == 'l')
+  {
+    lightBox = true;
+  } 
+  if (key == 'c')
+  {
+    lightBox = false;
+    kinect_debug = true;
+    if (!bodyClose)
+    {
+      STANDBY_TIMER = millis() - STANDBY_TIMEOUT;
+    }
+  }
+}
+
+void mouseDragged() {
+  select = false;
+}
+
+void mouseReleased() {
+  select = true;
+}
+
+void mousePressed()
+{
+  mouseClicks++;  
+  if (lightBox)
+  {
+    lightBox = false;
+    swipeAway = true;
+    swipeAwayLeft = !swipeAwayLeft;
+    mouseClicks = 0;
+  } 
+  else if (mouseClicks == 2 && millis() - mouseTime < 1000)
+  {
+    mouseClicks = 0;
+    float distCursor = dist(mouseX, mouseY, width/2, height/2);
+    if (distCursor >= 350 && !allLabels)
+    {
+      selectHome();    
+    }
+  }
+  if (mouseClicks == 1)
+  {
+    mouseTime = millis();
+  }
+  else if (mouseClicks > 2)
+  {
+    mouseClicks = 0;
+  }
+}
+
+void drawNames()
+{
+  rectMode(CORNER);
+  textSize(16);
+  textAlign(LEFT);
+  textLeading(1);
+  text("Dane Webster | Ivica Ico Bukvic | Cody Cahoon | Bin He", namesLeft, height - namesBottom - 1 * namesApart);
+}
