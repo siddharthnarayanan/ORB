@@ -1,0 +1,196 @@
+0	Dane Webster	0
+0	Chris Russell	1
+0	Mallory Brangan	2
+1	Yong Cao	3
+1	Chao Peng	4
+2	Yong Cao	3
+2	Chao Peng	4
+3	Yong Cao	3
+3	Student	5
+4	Yong Cao	3
+4	Chao Peng	4
+5	Phyllis Newbill	6
+5	Liesl Baum	7
+5	Mason Walker	8
+5	Ben Knapp	9
+5	Sam Leary	10
+5	Ico Bukvic	11
+5	Sam Blanchard	12
+5	Evelien Schilder	13
+5	Clara Hintermeister	14
+5	Luke Demarest	15
+5	Colin Ruhbright	16
+5	and Jason Forsyth	17
+6	Department of Theatre & Cinema at Virginia Tech	18
+6	New River Valley Planning District Commission (NRVPDC)	19
+7	Dane Webster	0
+7	Yong Cao	3
+7	Ico Bukvic	11
+7	Franics Quek	20
+7	Steve Harrison	21
+8	Students in two of Dr. David Cline's Oral History Classes	22
+8	Christiansburg Institute	23
+8	Inc.	24
+8	Christiansburg Institute Alumni Association	25
+9	None Listed	26
+10	Keynote Speakers	27
+10	Congressman Tim Ryan	28
+10	Rich Fernandez	29
+10	Google	30
+10	Trungram Gyaltrul Rinpoche	31
+10	Linda Lantieri	32
+10	Inner Resilience	33
+10	Ali and Atman Smith	34
+10	Andres Gonzalez	35
+10	Holistic Life Foundation	36
+10	Michael Carroll	37
+10	Author	38
+10	Rick Bowles	39
+10	Merck & Co.	40
+10	Inc. (retired)	41
+10	Mark McNamee	42
+10	Provost	43
+10	Virginia Tech	44
+11	Teri Finn	45
+11	Liesl Baum	7
+11	Phyllis Leary Newbill	46
+12	Yong Cao	3
+13	Yong Cao	3
+14	Teri Finn	45
+14	Liesl Baum	7
+14	Phyllis Leary Newbill	46
+15	Teri Finn	45
+15	Liesl Baum	7
+15	Phyllis Leary Newbill	46
+16	Michael Evans	47
+16	Osmon Balci	48
+16	Mido Chang	49
+16	Kirby Deater-Deckard	50
+16	Michael Evans	47
+16	Anderson Norton	51
+16	Serdar Aslan	52
+16	Steven Boyce	53
+16	Kyle Cheney	54
+16	Nan Chen	55
+16	Sunha Kim	56
+16	Zhe Wang	57
+16	Shereen El-Mallah	58
+16	Emily McClelland	59
+16	Chantie Nguyen	60
+16	Andrew Nicholas	61
+17	Teri Finn	45
+17	Liesl Baum	7
+17	Phyllis Leary Newbill	46
+18	community members in the NRV and others who knew Jo Carson	62
+19	Thenmozhi Soundararajan	63
+19	Office of Learning Technologies and Institute for Policy and Governance (VTIPG)	64
+20	Liesl Baum	7
+20	Phyllis Leary Newbill	46
+20	Teri Finn	45
+21	Yong Cao	3
+21	Chao Peng	4
+22	Ico Bukvic	11
+23	Phyllis Newbill	6
+23	Liesl Baum	7
+23	Sarah Stacey	65
+23	Jason Forsyth	66
+23	Michael Stewart	67
+23	Evelien Schilder	13
+23	Tanner Upthegrove	68
+23	Dane Webster	0
+23	Joseph Bruzek	69
+23	LiYun "Lena" Ye	70
+24	Dane Webster	0
+24	Ico Bukvic	11
+24	Ben Knapp	9
+24	Sam Blanchard	12
+24	Jason Forsyth	66
+24	Blake Sawyer	71
+24	Taylor O'Connor	72
+24	Brennon Bortz	73
+24	Liesl Baum	7
+24	Teri Finn	45
+24		74
+25	Students (K-12)	75
+26	Teri Finn	45
+26	Liesl Baum	7
+26	Phyllis Leary Newbill	46
+27	Ico Bukvic	11
+27	DISIS	76
+28	DISIS faculty and students	77
+29	Yong Cao	3
+29	Dane Webster	0
+29	Carilion Hospital	78
+29	Students	79
+30	Greg Mitchell	80
+30	Emily Fielder	81
+30	Kendall Woodard	82
+30	Evelien Scheilder	83
+30	Gregory Wilson	84
+30	Liesl Baum	7
+30	Phyllis Leary Newbill	46
+30	Teri Finn	45
+31	Dane Webster	0
+31	Crandall Shifflett	85
+31	Yong Cao	3
+31	Rhyannon Berkowitz	86
+31	Pete Lustig	87
+31	Steve Sizemore	88
+32	Dane Webster	0
+32	Rolf Mueller	89
+32	Anupam Gupta	90
+32	Reza Tassoji	91
+33	Dane Webster	0
+33	Rolf Mueller	89
+33	Anupam Gupta	90
+33	Reza Tassoji	91
+34	Nicholas Polys	92
+34	Peter Sforza	93
+35	Thomas Tucker	94
+36	Chao Peng	4
+36	Reza Tassoji	91
+36	Teri Finn	45
+37	Dane Webster	0
+37	Madhav Martha	95
+37	Henning Mortveit	96
+37	Dawen Xie	97
+37	NDSSL	98
+38	Dane Webster	0
+38	Bryan Lewis	99
+38	Kristy Collins	100
+38	Stephen Eubanks	101
+38	NDSSL	98
+39	Thomas Tucker	94
+39	Pablo Tarazaga	102
+39	Mary Kasarda	103
+40	Ariana Wyatt	104
+40	Tracy Cowden	105
+40	Kelly Parkes	106
+40	Katie Dredger	107
+40	Ico Bukvic	11
+41	Jocelyn Wilson	108
+42	Aki Ishida	109
+42	Ico Bukvic	11
+42	Brennon Bortz	73
+42	Benjamin Knapp	110
+42	students of architecture and engineering	111
+43	Thomas Tucker	94
+43	Bess J. Pierce	112
+43	Jeryl C. Jones	113
+43	Matthew Swarts	114
+44	Benjamin Knapp	110
+44	Yong Cao	3
+44	Ico Bukvic	11
+44	Nicholas Polys	92
+44	James Ivory	115
+44	Doug Bowman	116
+44	Dane Webster	0
+44	Thomas Tucker	94
+44	Christina Lidwin	117
+44	Abby Garrett	118
+44	Matt Bock	119
+45	Sam Blanchard	12
+45	Kirk Cameron	120
+45	Ali Butt	121
+46		74
+47		74
